@@ -1,0 +1,626 @@
+/* Reset Styles
+https://www.joshwcomeau.com/css/custom-css-reset/ */
+
+:root {
+  --main-bg-color: #141414;
+  --main-text-color: #fff;
+  --secondary-text-color:#fff;
+  --cta-bg-color:#7cb3c0;
+  --super-big-h-size:9em;
+  --normal-h-size:52px;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+* {
+    margin: 0;
+  }
+
+html, body {
+    height: 100%;
+    color: var(--main-bg-color);
+  }
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+
+input, button, textarea, select {
+    font: inherit;
+  }
+
+a {
+  text-decoration: none;
+  font-size: 30px;
+  color: var(--main-text-color);
+}
+
+p {
+  color: var(--main-text-color);
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 300;
+}
+ul {
+  margin-block-start: 0;
+  padding-inline-start: 0;
+}
+
+ul li {
+  font-family: 'Visby CF';
+  list-style-type: none;
+  font-size: 30px;
+  color: var(--main-text-color);
+  font-weight: 300;
+}
+ 
+#root, #__next {
+    isolation: isolate;
+  }
+
+.reveal{
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: 0.5s all ease;
+}
+.reveal.active{
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* General Styles */
+
+@font-face {
+  font-family: 'Visby CF';
+  src: url('../fonts/VisbyCF-Medium.eot');
+  src: local('Visby CF Medium'), local('VisbyCF-Medium'),
+      url('../fonts/VisbyCF-Medium.eot') format('embedded-opentype'),
+      url('../fonts/VisbyCF-Medium.woff2') format('woff2'),
+      url('../fonts/VisbyCF-Medium.woff') format('woff'),
+      url('../fonts/VisbyCF-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Visby CF';
+  src: url('VisbyCF-Bold.eot');
+  src: local('Visby CF Bold'), local('VisbyCF-Bold'),
+      url('../fonts/VisbyCF-Bold.eot') format('embedded-opentype'),
+      url('../fonts/VisbyCF-Bold.woff2') format('woff2'),
+      url('../fonts/VisbyCF-Bold.woff') format('woff'),
+      url('../fonts/VisbyCF-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Unna';
+  src: url('Unna-Regular.eot');
+  src: local('Unna'), local('Unna'),
+      url('../fonts/unna/Unna-Regular.eot') format('embedded-opentype'),
+      url('../fonts/unna/Unna-Regular.woff2') format('woff2'),
+      url('../fonts/unna/Unna-Regular.woff') format('woff'),
+      url('../fonts/unna/Unna-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+html,
+body {
+  margin: 0;
+  height: 100vh;
+  width: 100%;
+  font-family: 'Visby CF', sans-serif;;
+}
+
+header {
+  height: 60px;
+  width: 100%;
+  top: 0;
+  position: fixed;
+  z-index: 150;
+}
+
+header img {
+  max-width: 80px;
+  margin: 0 auto;
+}
+
+#wrap {
+  min-height: 100%;
+  position: relative;
+  z-index: 120;
+}
+
+.fullpage {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+}
+
+.hero {
+  position: relative;
+  display: flex;
+}
+
+.hero video, .hero img {
+    width: 100%;
+    height: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    z-index: 1;
+    position: absolute;
+    top: 0;
+  }
+
+.hero .overlay {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.5);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+  }
+
+#hero{
+  position: absolute;
+  top: 0;
+  z-index: 0;
+  z-index: 100;
+}
+
+
+#hero.hero .overlay {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.hero .intro {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    max-height: 100%;
+    text-align: left;
+    z-index: 3;
+}
+ 
+.nav{
+  position: fixed;
+  bottom: 0;
+  z-index: 100;
+  justify-content: space-around;
+}
+.hero h1, .hero h2, h2.subH {
+  font-family: 'Visby CF', sans-serif;
+  font-weight: normal;
+  color: var(--secondary-text-color);
+}
+
+h1.normal {
+  font-size:var(--normal-h-size);
+  line-height: 1em;
+}
+
+h1.big {
+  font-size: 6em;
+  line-height: 1em;
+  color:var(--secondary-text-color)!important;
+  margin-top: -20px;
+  margin-bottom: 10px;
+}
+
+.hero p{
+  margin-top: 20px;
+}
+
+.feature .intro{
+  align-items: center;
+  text-align: center;
+}
+
+.cta_button {
+  display: flex;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  justify-content: center;
+  align-items: center;
+  font-family: Visby CF;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 100%;
+  background: transparent;
+  outline: none;
+  cursor: pointer;
+  padding: 12px 22px;
+  border-radius: 32px;
+  transition: all 1s ease;
+  border: 0;
+  background-color: var(--cta-bg-color);
+  color: var(--main-text-color);
+}
+.cta_button .arrows_btn {
+  cursor: pointer;
+  overflow: hidden;
+  display: block;
+  max-width: 32px;
+}
+
+.cta_button .icons {
+  position: relative;
+  display: flex;
+  left: -100%;
+  width: 350%;
+  height: 30px;
+  transition: .3s ease-in-out;
+}
+
+.cta_button:hover .icons {
+  transform: translateX(30%);
+}
+
+.item .arrows_btn .icons {
+  display: block;
+  padding-top: 10px;
+}
+
+.feature h2 {
+  color:var(--secondary-text-color);
+  font-size: var(--normal-h-size);
+  font-weight: 400;
+  line-height: 1em;
+}
+
+#about h2 {
+  font-size: 3em;
+  color: var(--main-bg-color);
+}
+
+#about p {
+  color: var(--main-bg-color);
+}
+
+#contact {
+  background-color: var(--main-bg-color);
+  color: var(--main-text-color);
+  clear: both;
+  width: 100%;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+#contact a {
+  font-size: 14px;
+}
+
+#contact .container {
+  padding-top: 50px;
+}
+
+#contact a{
+  color:var(--main-text-color);
+}
+
+#contact h2 {
+  font-size: 26px;
+  padding-right: 2em;
+}
+
+#contact .icons img {
+  max-width: 30px;
+  display: inline-block;
+}
+
+#about {
+  position: relative;
+  z-index: 10;
+  background: #fff;
+  text-align: center;
+}
+s
+#about h2 {
+  padding-top: 2em;
+  padding-bottom: 1em;
+}
+
+#about p {
+  padding-top: 1em;
+  padding-bottom: 2em;
+}
+
+#about .container-video {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  transition: all 1s ease;
+  overflow: hidden;
+}
+
+/* Helper classes */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.relative {
+  position: relative;
+}
+.centered {
+  margin: 0 auto;
+}
+.row {
+  display: flex;
+}
+.flex {
+  display: flex;
+}
+
+.justify-end {
+  justify-content: end;
+}
+
+.pr-1 {
+  padding-right: 1rem;
+}
+.pl-1 {
+  padding-left: 1rem;
+}
+
+.mt_30{
+  margin-top: 30px;
+}
+
+.mt_10{
+  margin-top: 10px;
+}
+
+.mt_20{
+  margin-top: 20px;
+}
+
+.mb_20{
+  margin-bottom: 20px;
+}
+
+.pb_60{
+  padding-bottom: 60px;
+}
+
+.pt_60{
+  padding-top: 60px;
+}
+.pt_30{
+  padding-top: 30px;
+}
+
+.pt_7{
+  padding-top: 7em;
+}
+
+.pt_3{
+  padding-top: 3em;
+}
+
+.pb_3{
+  padding-bottom: 3em;
+}
+
+.pb_6{
+  padding-bottom: 6em;
+}
+
+.pr_5 {
+  padding-right: 5px;
+}
+
+.b_120 {
+  bottom: -120px;
+}
+
+.full {
+  width:100%;
+}
+.md-w-1-2 {
+  width: 50%;
+}
+
+.md-w-2-3 {
+  width: 66.666667%;
+}
+
+.md-w-1-3 {
+  width: 33.333333%;
+}
+
+.md-w-1-5{
+  width: 20%;
+}
+.md-w-2-5{
+  width: 40%;
+}
+.md-1-4 {
+  width: 25%;
+}
+.flex-col {
+  flex-direction: column;
+}
+
+@media screen and (max-width: 800px){
+  
+  #hero .intro .container {
+    display: flex;
+    flex-flow: column;
+  }
+
+  #hero .intro {
+    padding-bottom: 40px;
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+
+  #hero #headingContainer {
+    text-align: center;
+  }
+
+  #hero {
+    text-align: center;
+  }
+
+  #hero p{
+    display: none;
+  }
+
+  #hero .cta_button {
+    margin: 0 auto;
+    margin-top: 1em;
+  }
+  
+  #hero .intro {
+    justify-content: flex-end;
+  }
+
+  #hero .cta_button {
+    margin-top: 3em;
+    margin-bottom: 3em;
+  }
+
+  .hero #menu span {
+    font-size: 18px;
+  }
+
+  #menu .item .arrows_btn .icons {
+    padding-top: 0;
+  }
+
+  h1.normal {
+    font-size: 3em;
+    line-height: 1em;
+  }
+
+  h1.big {
+      font-size: 4em;
+      line-height: 1em;
+      margin-top: 0px;
+  }
+
+  img.bg,  video.bg {
+    min-height: 100%;
+    min-width: 1024px;
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -512px; 
+  }
+
+  p, ul li, a {
+    font-size: 24px;
+  }
+  .feature {
+    flex-direction: column;
+  }
+  .feature .container {
+    width: 100%;
+  }
+  .keys .item {
+    padding: 10px
+  }
+  #features .section_two_col { 
+    padding: 0;
+    width: 94%;
+  }
+
+  .feature .gallery {
+    display: none;
+  }
+  #about .container-video {
+    width: 100%;
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+
+  #contact {
+    text-align: center;
+  }
+  
+  #contact .cta_button {
+    margin: 0 auto;
+    margin-bottom: 3em;
+  }
+  .nav {
+    flex-direction: row!important;
+  }
+
+  .nav .arrows_btn {
+    display: none;
+  }
+
+  .nav a {
+    font-size: 10px;
+  }
+  .nav a .item{
+    text-align: center;
+  }
+
+  #contact h2 {
+    margin-top: 3em;
+    padding-right: 0;
+  }
+
+  .sm-w-full {
+    width: 100%;
+  }
+
+  .flex.full {
+    flex-direction: column;
+  }
+  .sm-hide {
+    display: none;
+  }
+}
+
+body {
+  background-position: center;
+  background-image: url(../images/images5.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+#bgvid {
+  /*  making the video fullscreen  */
+    position: fixed;
+    right: 0; 
+    bottom: 0;
+    min-height: 100%;
+    width: auto; 
+    height: auto;
+    z-index: -100;
+    object-fit: cover;
+  }
+.spacer{
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  scroll-snap-align: unset;
+  scroll-snap-stop: unset;
+  z-index: -100;
+}
+
+
