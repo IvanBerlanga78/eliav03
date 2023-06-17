@@ -1,6 +1,10 @@
 // Secondary Navigation
 
 $(document).ready(function(){
+  $('.logo').on('click', function(event){
+    event.preventDefault();
+    $('#main').css({'transform': 'translate3d(0px, 0px, 0px)'});
+  })
 
   $('#urban').on('click', function(event){
     event.preventDefault();
