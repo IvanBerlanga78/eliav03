@@ -483,39 +483,52 @@ s
 
 @media screen and (max-width: 800px){
   
-  #hero .intro .container {
+  .hero.feature .intro {
+    justify-content: center;
+    
+  }
+
+  .hero.feature .intro .md-w-1-3 {
+    padding: 0; 
+  }
+
+  .hero .intro .container {
     display: flex;
     flex-flow: column;
   }
 
-  #hero .intro {
+  .hero .intro {
     padding-bottom: 40px;
     padding-left: 1em;
     padding-right: 1em;
   }
 
-  #hero #headingContainer {
+  .hero #headingContainer {
     text-align: center;
   }
 
-  #hero {
+  .hero{
     text-align: center;
   }
 
-  #hero p{
-    display: none;
+  .hero p{
+    text-align: center;
+    font-size: 16px;
+    line-height: 18px;
   }
 
-  #hero .cta_button {
+  .hero .cta_button {
     margin: 0 auto;
     margin-top: 1em;
+    padding: 10px 18px;
+    font-size: 14px;
   }
   
-  #hero .intro {
+  .hero .intro {
     justify-content: flex-end;
   }
 
-  #hero .cta_button {
+  .hero.cta_button {
     margin-top: 3em;
     margin-bottom: 3em;
   }
@@ -534,9 +547,10 @@ s
   }
 
   h1.big {
-      font-size: 4em;
+      font-size: 3em;
       line-height: 1em;
       margin-top: 0px;
+      margin-bottom: 0;
   }
 
   img.bg,  video.bg {
@@ -550,9 +564,6 @@ s
     margin-left: -512px; 
   }
 
-  p, ul li, a {
-    font-size: 24px;
-  }
   .feature {
     flex-direction: column;
   }
@@ -583,6 +594,11 @@ s
   #contact .cta_button {
     margin: 0 auto;
     margin-bottom: 3em;
+  }
+
+  .nav {
+    padding-top: 1em;
+    padding-bottom: 1em;
   }
   .nav {
     flex-direction: row!important;
