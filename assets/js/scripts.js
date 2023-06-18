@@ -5,14 +5,16 @@ $(document).ready(function(){
     event.preventDefault();
     $('#main').css({'transform': 'translate3d(0px, 0px, 0px)'});
   })
-
+    /*
   $('#urban').on('click', function(event){
     event.preventDefault();
     $([document.documentElement, document.body]).animate({
-      scrollTop: $("#feat-urban").offset().top
-      
+     scrollTop: $("#feat-urban").offset().top
+     console.log('click') 
   }, 1000);
+  
   })
+
   $('#archit').on('click', function(){
     $([document.documentElement, document.body]).animate({
       scrollTop: $("#feat-architecture").offset().top
@@ -28,7 +30,7 @@ $(document).ready(function(){
       scrollTop: $("#feat-technical").offset().top
   }, 1000);
   })
-
+  */
 })
 
 window.addEventListener("scroll", blurContent);
@@ -57,10 +59,13 @@ function blurContent() {
 new fullpage('#main', {
   //options here
   autoScrolling:true,
-  fixedElements: 'header, #hero',
-  anchors:['slide1', 'slide2', 'slide3'],
+  fixedElements: 'header, #hero, #menu',
   waterEffect: false,
+  anchors: ['firstPage', 'slide2', 'slide3', 'slide4'],
+  menu: '#menu',
+  css3: true,
   //credits: { enabled: false, label: 'Made with fullPage.js', position: 'right'},
-  licenseKey: 'gplv3-license'
+  licenseKey: 'gplv3-license',
+  scrollingSpeed: 1000
 });
 
