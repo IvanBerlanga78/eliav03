@@ -1,11 +1,12 @@
 // Secondary Navigation
 
 $(document).ready(function(){
+  /*
   $('.logo').on('click', function(event){
     event.preventDefault();
     $('#main').css({'transform': 'translate3d(0px, 0px, 0px)'});
   })
-    /*
+    
   $('#urban').on('click', function(event){
     event.preventDefault();
     $([document.documentElement, document.body]).animate({
@@ -61,7 +62,7 @@ new fullpage('#main', {
   autoScrolling:true,
   fixedElements: 'header, #hero, #menu',
   waterEffect: false,
-  anchors: ['firstPage', 'slide2', 'slide3', 'slide4'],
+  anchors: ['0Page','firstPage', 'SecondPage', 'ThirdPage', 'FourthPage'],
   menu: '#menu',
   css3: true,
   //credits: { enabled: false, label: 'Made with fullPage.js', position: 'right'},

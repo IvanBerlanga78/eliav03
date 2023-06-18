@@ -163,7 +163,7 @@ header img {
     top: 0;
   }
 
-.hero .overlay {
+.hero .overlay, .video-overlay {
     position: absolute;
     background: rgba(0, 0, 0, 0.5);
     top: 0;
@@ -181,7 +181,7 @@ header img {
 }
 
 
-#hero.hero .overlay {
+.video-overlay {
   background: rgba(0, 0, 0, 0.8);
 }
 
